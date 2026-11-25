@@ -1,0 +1,1248 @@
+[
+  {
+    "id": 0,
+    "topic": "TOP0",
+    "name": "Heatpump_State",
+    "label": "Stato della pompa di calore",
+    "group": "Impianto",
+    "unit": "",
+    "type": "OffOn",
+    "options": [
+      "Spenta",
+      "Accesa"
+    ],
+    "entity": null
+  },
+  {
+    "id": 1,
+    "topic": "TOP1",
+    "name": "Pump_Flow",
+    "label": "Portata acqua",
+    "group": "Impianto",
+    "unit": "l/min",
+    "type": "LitersPerMin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 2,
+    "topic": "TOP2",
+    "name": "Force_DHW_State",
+    "label": "Forzatura acqua sanitaria",
+    "group": "Acqua sanitaria",
+    "unit": "",
+    "type": "DisabledEnabled",
+    "options": [
+      "Disabilitato",
+      "Abilitato"
+    ],
+    "entity": null
+  },
+  {
+    "id": 3,
+    "topic": "TOP3",
+    "name": "Quiet_Mode_Schedule",
+    "label": "Programma silenzioso",
+    "group": "Impianto",
+    "unit": "",
+    "type": "DisabledEnabled",
+    "options": [
+      "Disabilitato",
+      "Abilitato"
+    ],
+    "entity": null
+  },
+  {
+    "id": 4,
+    "topic": "TOP4",
+    "name": "Operating_Mode_State",
+    "label": "Modalità operativa",
+    "group": "Impianto",
+    "unit": "",
+    "type": "OpModeDesc",
+    "options": [
+      "Riscaldamento",
+      "Raffrescamento",
+      "Automatico · caldo",
+      "Acqua sanitaria",
+      "Riscaldamento + ACS",
+      "Raffrescamento + ACS",
+      "Automatico caldo + ACS",
+      "Automatico · freddo",
+      "Automatico freddo + ACS"
+    ],
+    "entity": null
+  },
+  {
+    "id": 5,
+    "topic": "TOP5",
+    "name": "Main_Inlet_Temp",
+    "label": "Temperatura di ritorno",
+    "group": "Impianto",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 6,
+    "topic": "TOP6",
+    "name": "Main_Outlet_Temp",
+    "label": "Temperatura di mandata",
+    "group": "Impianto",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 7,
+    "topic": "TOP7",
+    "name": "Main_Target_Temp",
+    "label": "Obiettivo mandata",
+    "group": "Impianto",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 8,
+    "topic": "TOP8",
+    "name": "Compressor_Freq",
+    "label": "Frequenza compressore",
+    "group": "Componenti",
+    "unit": "Hz",
+    "type": "Hertz",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 9,
+    "topic": "TOP9",
+    "name": "DHW_Target_Temp",
+    "label": "Obiettivo acqua sanitaria",
+    "group": "Acqua sanitaria",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 10,
+    "topic": "TOP10",
+    "name": "DHW_Temp",
+    "label": "Temperatura acqua sanitaria",
+    "group": "Acqua sanitaria",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 11,
+    "topic": "TOP11",
+    "name": "Operations_Hours",
+    "label": "Ore compressore",
+    "group": "Componenti",
+    "unit": "h",
+    "type": "Hours",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 12,
+    "topic": "TOP12",
+    "name": "Operations_Counter",
+    "label": "Avviamenti compressore",
+    "group": "Componenti",
+    "unit": "",
+    "type": "Counter",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 13,
+    "topic": "TOP13",
+    "name": "Main_Schedule_State",
+    "label": "Programma principale",
+    "group": "Impianto",
+    "unit": "",
+    "type": "DisabledEnabled",
+    "options": [
+      "Disabilitato",
+      "Abilitato"
+    ],
+    "entity": null
+  },
+  {
+    "id": 14,
+    "topic": "TOP14",
+    "name": "Outside_Temp",
+    "label": "Temperatura esterna",
+    "group": "Impianto",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 15,
+    "topic": "TOP15",
+    "name": "Heat_Energy_Production",
+    "label": "Potenza termica riscaldamento",
+    "group": "Riscaldamento",
+    "unit": "W",
+    "type": "Watt",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 16,
+    "topic": "TOP16",
+    "name": "Heat_Energy_Consumption",
+    "label": "Assorbimento riscaldamento",
+    "group": "Riscaldamento",
+    "unit": "W",
+    "type": "Watt",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 17,
+    "topic": "TOP17",
+    "name": "Powerful_Mode_Time",
+    "label": "Modalità potente",
+    "group": "Riscaldamento",
+    "unit": "",
+    "type": "Powerfulmode",
+    "options": [
+      "Spenta",
+      "30 minuti",
+      "60 minuti",
+      "90 minuti"
+    ],
+    "entity": null
+  },
+  {
+    "id": 18,
+    "topic": "TOP18",
+    "name": "Quiet_Mode_Level",
+    "label": "Livello silenzioso",
+    "group": "Riscaldamento",
+    "unit": "",
+    "type": "Quietmode",
+    "options": [
+      "Spenta",
+      "Livello 1",
+      "Livello 2",
+      "Livello 3"
+    ],
+    "entity": null
+  },
+  {
+    "id": 19,
+    "topic": "TOP19",
+    "name": "Holiday_Mode_State",
+    "label": "Modalità vacanza",
+    "group": "Riscaldamento",
+    "unit": "",
+    "type": "HolidayState",
+    "options": [
+      "Spenta",
+      "Programmata",
+      "Attiva"
+    ],
+    "entity": null
+  },
+  {
+    "id": 20,
+    "topic": "TOP20",
+    "name": "ThreeWay_Valve_State",
+    "label": "Valvola a tre vie",
+    "group": "Impianto",
+    "unit": "",
+    "type": "Valve",
+    "options": [
+      "Riscaldamento",
+      "Acqua sanitaria"
+    ],
+    "entity": null
+  },
+  {
+    "id": 21,
+    "topic": "TOP21",
+    "name": "Outside_Pipe_Temp",
+    "label": "Temperatura tubo esterno",
+    "group": "Componenti",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 22,
+    "topic": "TOP22",
+    "name": "DHW_Heat_Delta",
+    "label": "Differenziale ACS",
+    "group": "Acqua sanitaria",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 23,
+    "topic": "TOP23",
+    "name": "Heat_Delta",
+    "label": "Differenziale riscaldamento",
+    "group": "Riscaldamento",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 24,
+    "topic": "TOP24",
+    "name": "Cool_Delta",
+    "label": "Differenziale raffrescamento",
+    "group": "Raffrescamento",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 25,
+    "topic": "TOP25",
+    "name": "DHW_Holiday_Shift_Temp",
+    "label": "Correzione vacanza ACS",
+    "group": "Acqua sanitaria",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 26,
+    "topic": "TOP26",
+    "name": "Defrosting_State",
+    "label": "Sbrinamento",
+    "group": "Impianto",
+    "unit": "",
+    "type": "DisabledEnabled",
+    "options": [
+      "Disabilitato",
+      "Abilitato"
+    ],
+    "entity": null
+  },
+  {
+    "id": 27,
+    "topic": "TOP27",
+    "name": "Z1_Heat_Request_Temp",
+    "label": "Correzione riscaldamento zona 1",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 28,
+    "topic": "TOP28",
+    "name": "Z1_Cool_Request_Temp",
+    "label": "Obiettivo raffrescamento zona 1",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 29,
+    "topic": "TOP29",
+    "name": "Z1_Heat_Curve_Target_High_Temp",
+    "label": "Curva caldo Z1 · mandata alta",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 30,
+    "topic": "TOP30",
+    "name": "Z1_Heat_Curve_Target_Low_Temp",
+    "label": "Curva caldo Z1 · mandata bassa",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 31,
+    "topic": "TOP31",
+    "name": "Z1_Heat_Curve_Outside_High_Temp",
+    "label": "Curva caldo Z1 · esterna alta",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 32,
+    "topic": "TOP32",
+    "name": "Z1_Heat_Curve_Outside_Low_Temp",
+    "label": "Curva caldo Z1 · esterna bassa",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 33,
+    "topic": "TOP33",
+    "name": "Room_Thermostat_Temp",
+    "label": "Temperatura termostato ambiente",
+    "group": "Impianto",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 34,
+    "topic": "TOP34",
+    "name": "Z2_Heat_Request_Temp",
+    "label": "Correzione riscaldamento zona 2",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 35,
+    "topic": "TOP35",
+    "name": "Z2_Cool_Request_Temp",
+    "label": "Obiettivo raffrescamento zona 2",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 36,
+    "topic": "TOP36",
+    "name": "Z1_Water_Temp",
+    "label": "Acqua zona 1",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 37,
+    "topic": "TOP37",
+    "name": "Z2_Water_Temp",
+    "label": "Acqua zona 2",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 38,
+    "topic": "TOP38",
+    "name": "Cool_Energy_Production",
+    "label": "Potenza termica raffrescamento",
+    "group": "Raffrescamento",
+    "unit": "W",
+    "type": "Watt",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 39,
+    "topic": "TOP39",
+    "name": "Cool_Energy_Consumption",
+    "label": "Assorbimento raffrescamento",
+    "group": "Raffrescamento",
+    "unit": "W",
+    "type": "Watt",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 40,
+    "topic": "TOP40",
+    "name": "DHW_Energy_Production",
+    "label": "Potenza termica ACS",
+    "group": "Acqua sanitaria",
+    "unit": "W",
+    "type": "Watt",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 41,
+    "topic": "TOP41",
+    "name": "DHW_Energy_Consumption",
+    "label": "Assorbimento ACS",
+    "group": "Acqua sanitaria",
+    "unit": "W",
+    "type": "Watt",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 42,
+    "topic": "TOP42",
+    "name": "Z1_Water_Target_Temp",
+    "label": "Obiettivo acqua zona 1",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 43,
+    "topic": "TOP43",
+    "name": "Z2_Water_Target_Temp",
+    "label": "Obiettivo acqua zona 2",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 44,
+    "topic": "TOP44",
+    "name": "Error",
+    "label": "Codice errore",
+    "group": "Componenti",
+    "unit": "",
+    "type": "ErrorState",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 45,
+    "topic": "TOP45",
+    "name": "Room_Holiday_Shift_Temp",
+    "label": "Correzione vacanza riscaldamento",
+    "group": "Riscaldamento",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 46,
+    "topic": "TOP46",
+    "name": "Buffer_Temp",
+    "label": "Temperatura accumulo inerziale",
+    "group": "Accessori",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 47,
+    "topic": "TOP47",
+    "name": "Solar_Temp",
+    "label": "Temperatura solare",
+    "group": "Accessori",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 48,
+    "topic": "TOP48",
+    "name": "Pool_Temp",
+    "label": "Temperatura piscina",
+    "group": "Accessori",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 49,
+    "topic": "TOP49",
+    "name": "Main_Hex_Outlet_Temp",
+    "label": "Uscita scambiatore principale",
+    "group": "Componenti",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 50,
+    "topic": "TOP50",
+    "name": "Discharge_Temp",
+    "label": "Temperatura scarico compressore",
+    "group": "Componenti",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 51,
+    "topic": "TOP51",
+    "name": "Inside_Pipe_Temp",
+    "label": "Temperatura tubo interno",
+    "group": "Componenti",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 52,
+    "topic": "TOP52",
+    "name": "Defrost_Temp",
+    "label": "Temperatura sbrinamento",
+    "group": "Componenti",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 53,
+    "topic": "TOP53",
+    "name": "Eva_Outlet_Temp",
+    "label": "Uscita evaporatore",
+    "group": "Componenti",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 54,
+    "topic": "TOP54",
+    "name": "Bypass_Outlet_Temp",
+    "label": "Uscita bypass",
+    "group": "Componenti",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 55,
+    "topic": "TOP55",
+    "name": "Ipm_Temp",
+    "label": "Temperatura modulo IPM",
+    "group": "Componenti",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 56,
+    "topic": "TOP56",
+    "name": "Z1_Temp",
+    "label": "Temperatura ambiente zona 1",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 57,
+    "topic": "TOP57",
+    "name": "Z2_Temp",
+    "label": "Temperatura ambiente zona 2",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 58,
+    "topic": "TOP58",
+    "name": "DHW_Heater_State",
+    "label": "Resistenza ACS consentita",
+    "group": "Acqua sanitaria",
+    "unit": "",
+    "type": "BlockedFree",
+    "options": [
+      "Bloccata",
+      "Consentita"
+    ],
+    "entity": null
+  },
+  {
+    "id": 59,
+    "topic": "TOP59",
+    "name": "Room_Heater_State",
+    "label": "Resistenza riscaldamento consentita",
+    "group": "Riscaldamento",
+    "unit": "",
+    "type": "BlockedFree",
+    "options": [
+      "Bloccata",
+      "Consentita"
+    ],
+    "entity": null
+  },
+  {
+    "id": 60,
+    "topic": "TOP60",
+    "name": "Internal_Heater_State",
+    "label": "Resistenza interna",
+    "group": "Riscaldamento",
+    "unit": "",
+    "type": "InactiveActive",
+    "options": [
+      "Inattiva",
+      "Attiva"
+    ],
+    "entity": null
+  },
+  {
+    "id": 61,
+    "topic": "TOP61",
+    "name": "External_Heater_State",
+    "label": "Resistenza esterna",
+    "group": "Riscaldamento",
+    "unit": "",
+    "type": "InactiveActive",
+    "options": [
+      "Inattiva",
+      "Attiva"
+    ],
+    "entity": null
+  },
+  {
+    "id": 62,
+    "topic": "TOP62",
+    "name": "Fan1_Motor_Speed",
+    "label": "Velocità ventilatore 1",
+    "group": "Componenti",
+    "unit": "rpm",
+    "type": "RotationsPerMin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 63,
+    "topic": "TOP63",
+    "name": "Fan2_Motor_Speed",
+    "label": "Velocità ventilatore 2",
+    "group": "Componenti",
+    "unit": "rpm",
+    "type": "RotationsPerMin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 64,
+    "topic": "TOP64",
+    "name": "High_Pressure",
+    "label": "Alta pressione",
+    "group": "Componenti",
+    "unit": "kgf/cm²",
+    "type": "Pressure",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 65,
+    "topic": "TOP65",
+    "name": "Pump_Speed",
+    "label": "Velocità circolatore",
+    "group": "Componenti",
+    "unit": "rpm",
+    "type": "RotationsPerMin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 66,
+    "topic": "TOP66",
+    "name": "Low_Pressure",
+    "label": "Bassa pressione",
+    "group": "Componenti",
+    "unit": "kgf/cm²",
+    "type": "Pressure",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 67,
+    "topic": "TOP67",
+    "name": "Compressor_Current",
+    "label": "Corrente compressore",
+    "group": "Componenti",
+    "unit": "A",
+    "type": "Ampere",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 68,
+    "topic": "TOP68",
+    "name": "Force_Heater_State",
+    "label": "Forzatura resistenza",
+    "group": "Riscaldamento",
+    "unit": "",
+    "type": "InactiveActive",
+    "options": [
+      "Inattiva",
+      "Attiva"
+    ],
+    "entity": null
+  },
+  {
+    "id": 69,
+    "topic": "TOP69",
+    "name": "Sterilization_State",
+    "label": "Sterilizzazione",
+    "group": "Acqua sanitaria",
+    "unit": "",
+    "type": "InactiveActive",
+    "options": [
+      "Inattiva",
+      "Attiva"
+    ],
+    "entity": null
+  },
+  {
+    "id": 70,
+    "topic": "TOP70",
+    "name": "Sterilization_Temp",
+    "label": "Obiettivo sterilizzazione",
+    "group": "Acqua sanitaria",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 71,
+    "topic": "TOP71",
+    "name": "Sterilization_Max_Time",
+    "label": "Durata massima sterilizzazione",
+    "group": "Acqua sanitaria",
+    "unit": "min",
+    "type": "Minutes",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 72,
+    "topic": "TOP72",
+    "name": "Z1_Cool_Curve_Target_High_Temp",
+    "label": "Curva freddo Z1 · mandata alta",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 73,
+    "topic": "TOP73",
+    "name": "Z1_Cool_Curve_Target_Low_Temp",
+    "label": "Curva freddo Z1 · mandata bassa",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 74,
+    "topic": "TOP74",
+    "name": "Z1_Cool_Curve_Outside_High_Temp",
+    "label": "Curva freddo Z1 · esterna alta",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 75,
+    "topic": "TOP75",
+    "name": "Z1_Cool_Curve_Outside_Low_Temp",
+    "label": "Curva freddo Z1 · esterna bassa",
+    "group": "Zona 1",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 76,
+    "topic": "TOP76",
+    "name": "Heating_Mode",
+    "label": "Regolazione riscaldamento",
+    "group": "Riscaldamento",
+    "unit": "",
+    "type": "HeatCoolModeDesc",
+    "options": [
+      "Curva climatica",
+      "Temperatura diretta"
+    ],
+    "entity": null
+  },
+  {
+    "id": 77,
+    "topic": "TOP77",
+    "name": "Heating_Off_Outdoor_Temp",
+    "label": "Soglia spegnimento riscaldamento",
+    "group": "Riscaldamento",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 78,
+    "topic": "TOP78",
+    "name": "Heater_On_Outdoor_Temp",
+    "label": "Soglia accensione resistenza",
+    "group": "Riscaldamento",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 79,
+    "topic": "TOP79",
+    "name": "Heat_To_Cool_Temp",
+    "label": "Passaggio caldo → freddo",
+    "group": "Raffrescamento",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 80,
+    "topic": "TOP80",
+    "name": "Cool_To_Heat_Temp",
+    "label": "Passaggio freddo → caldo",
+    "group": "Raffrescamento",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 81,
+    "topic": "TOP81",
+    "name": "Cooling_Mode",
+    "label": "Regolazione raffrescamento",
+    "group": "Raffrescamento",
+    "unit": "",
+    "type": "HeatCoolModeDesc",
+    "options": [
+      "Curva climatica",
+      "Temperatura diretta"
+    ],
+    "entity": null
+  },
+  {
+    "id": 82,
+    "topic": "TOP82",
+    "name": "Z2_Heat_Curve_Target_High_Temp",
+    "label": "Curva caldo Z2 · mandata alta",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 83,
+    "topic": "TOP83",
+    "name": "Z2_Heat_Curve_Target_Low_Temp",
+    "label": "Curva caldo Z2 · mandata bassa",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 84,
+    "topic": "TOP84",
+    "name": "Z2_Heat_Curve_Outside_High_Temp",
+    "label": "Curva caldo Z2 · esterna alta",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 85,
+    "topic": "TOP85",
+    "name": "Z2_Heat_Curve_Outside_Low_Temp",
+    "label": "Curva caldo Z2 · esterna bassa",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 86,
+    "topic": "TOP86",
+    "name": "Z2_Cool_Curve_Target_High_Temp",
+    "label": "Curva freddo Z2 · mandata alta",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 87,
+    "topic": "TOP87",
+    "name": "Z2_Cool_Curve_Target_Low_Temp",
+    "label": "Curva freddo Z2 · mandata bassa",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 88,
+    "topic": "TOP88",
+    "name": "Z2_Cool_Curve_Outside_High_Temp",
+    "label": "Curva freddo Z2 · esterna alta",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 89,
+    "topic": "TOP89",
+    "name": "Z2_Cool_Curve_Outside_Low_Temp",
+    "label": "Curva freddo Z2 · esterna bassa",
+    "group": "Zona 2",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 90,
+    "topic": "TOP90",
+    "name": "Room_Heater_Operations_Hours",
+    "label": "Ore resistenza riscaldamento",
+    "group": "Componenti",
+    "unit": "h",
+    "type": "Hours",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 91,
+    "topic": "TOP91",
+    "name": "DHW_Heater_Operations_Hours",
+    "label": "Ore resistenza ACS",
+    "group": "Acqua sanitaria",
+    "unit": "h",
+    "type": "Hours",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 92,
+    "topic": "TOP92",
+    "name": "Heat_Pump_Model",
+    "label": "Modello rilevato",
+    "group": "Componenti",
+    "unit": "",
+    "type": "Model",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 93,
+    "topic": "TOP93",
+    "name": "Pump_Duty",
+    "label": "Comando circolatore",
+    "group": "Componenti",
+    "unit": "",
+    "type": "Duty",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 94,
+    "topic": "TOP94",
+    "name": "Zones_State",
+    "label": "Zone attive",
+    "group": "Impianto",
+    "unit": "",
+    "type": "ZonesState",
+    "options": [
+      "Zona 1",
+      "Zona 2",
+      "Zone 1 e 2"
+    ],
+    "entity": null
+  },
+  {
+    "id": 95,
+    "topic": "TOP95",
+    "name": "Max_Pump_Duty",
+    "label": "Comando massimo circolatore",
+    "group": "Componenti",
+    "unit": "",
+    "type": "Duty",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 96,
+    "topic": "TOP96",
+    "name": "Heater_Delay_Time",
+    "label": "Ritardo resistenza",
+    "group": "Riscaldamento",
+    "unit": "min",
+    "type": "Minutes",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 97,
+    "topic": "TOP97",
+    "name": "Heater_Start_Delta",
+    "label": "Differenziale avvio resistenza",
+    "group": "Riscaldamento",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 98,
+    "topic": "TOP98",
+    "name": "Heater_Stop_Delta",
+    "label": "Differenziale arresto resistenza",
+    "group": "Riscaldamento",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 99,
+    "topic": "TOP99",
+    "name": "Buffer_Installed",
+    "label": "Accumulo inerziale installato",
+    "group": "Accessori",
+    "unit": "",
+    "type": "DisabledEnabled",
+    "options": [
+      "Disabilitato",
+      "Abilitato"
+    ],
+    "entity": null
+  },
+  {
+    "id": 100,
+    "topic": "TOP100",
+    "name": "DHW_Installed",
+    "label": "Accumulo sanitario installato",
+    "group": "Acqua sanitaria",
+    "unit": "",
+    "type": "DisabledEnabled",
+    "options": [
+      "Disabilitato",
+      "Abilitato"
+    ],
+    "entity": null
+  },
+  {
+    "id": 101,
+    "topic": "TOP101",
+    "name": "Solar_Mode",
+    "label": "Modalità solare",
+    "group": "Accessori",
+    "unit": "",
+    "type": "SolarModeDesc",
+    "options": [
+      "Disabilitato",
+      "Accumulo inerziale",
+      "Acqua sanitaria"
+    ],
+    "entity": null
+  },
+  {
+    "id": 102,
+    "topic": "TOP102",
+    "name": "Solar_On_Delta",
+    "label": "Differenziale avvio solare",
+    "group": "Accessori",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 103,
+    "topic": "TOP103",
+    "name": "Solar_Off_Delta",
+    "label": "Differenziale arresto solare",
+    "group": "Accessori",
+    "unit": "K",
+    "type": "Kelvin",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 104,
+    "topic": "TOP104",
+    "name": "Solar_Frost_Protection",
+    "label": "Antigelo solare",
+    "group": "Accessori",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  },
+  {
+    "id": 105,
+    "topic": "TOP105",
+    "name": "Solar_High_Limit",
+    "label": "Limite temperatura solare",
+    "group": "Accessori",
+    "unit": "°C",
+    "type": "Celsius",
+    "options": null,
+    "entity": null
+  }
+]

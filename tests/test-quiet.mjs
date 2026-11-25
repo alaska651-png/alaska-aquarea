@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {quietReading,requestQuiet} from '../src/climate-data.mjs';
+const now=Date.now(),beat={last_changed:new Date(now-1000).toISOString()},online={state:'on'};
+const state=value=>({state:value,attributes:{options:['Off','1','2','3','Scheduled']}});
+for(const value of ['Off','1','2','3','Scheduled']){const q=quietReading(state(value),beat,online,true,now);assert.equal(q.value,value);assert.equal(q.active,value!=='Off');}
+for(const value of ['unknown','unavailable','4'])assert.equal(quietReading(state(value),beat,online,true,now).label,'N/D');
+assert.equal(quietReading(state('1'),beat,online,false,now).active,false);
+assert.equal(quietReading(state('1'),{last_changed:new Date(now-40000).toISOString()},online,true,now).available,false);
+assert.equal(quietReading(state('Off'),beat,{state:'off'},true,now).available,false);
+let actual=quietReading(state('Off'),beat,online,true,now),calls=[],pauses=0;
+const deps={read:()=>actual,isAdmin:()=>true,send:async x=>calls.push(x),pause:async()=>{pauses++;actual=quietReading(state('2'),beat,online,true,now);}};
+assert.equal(await requestQuiet('Off',deps),false);assert.equal(calls.length,0);
+await assert.rejects(requestQuiet('Scheduled',deps),/non valido/);
+await assert.rejects(requestQuiet(2,deps),/non valido/);
+await assert.rejects(requestQuiet('1',{...deps,isAdmin:()=>false}),/amministratori/);assert.equal(calls.length,0);
+assert.equal(await requestQuiet('2',deps),true);assert.deepEqual(calls,['2']);assert.equal(pauses,1);
+actual={...actual,value:'Off'};calls=[];
+await assert.rejects(requestQuiet('3',{...deps,pause:async()=>{}}),/conferma Panasonic non ricevuta/);assert.deepEqual(calls,['3']);
+calls=[];actual={...actual,pending:true};await assert.rejects(requestQuiet('1',deps),/già in attesa/);assert.equal(calls.length,0);
+actual={...actual,pending:false};calls=[];
+await assert.rejects(requestQuiet('1',{...deps,pause:async()=>{actual={...actual,available:false};}}),/comunicazione interrotta/);assert.equal(calls.length,1);
+actual={...actual,available:true};calls=[];
+await assert.rejects(requestQuiet('1',{...deps,send:async()=>{throw new Error('HA denied');}}),/HA denied/);
+console.log('Quiet: states, permissions, validation, single request, confirmed readback, timeout and disconnect passed (mock only; no plant commands)');

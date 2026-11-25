@@ -1,0 +1,17 @@
+services:
+  coordinator:
+    build: ./coordinator
+    restart: unless-stopped
+    network_mode: host
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    env_file: [runtime.env]
+    volumes: ["./data:/data:rw"]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m"]
+    healthcheck:
+      test: ["CMD", "python", "/app/health.py"]
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 3

@@ -1,0 +1,117 @@
+{
+  "mapping_source": "Generic example; configure your own Home Assistant entities.",
+  "mqtt_prefix": "panasonic_heat_pump/",
+  "rooms": {
+    "bedroom_main": {
+      "name": "Camera principale",
+      "floor": "night",
+      "sensor": "sensor.example_bedroom_main_sensor",
+      "relay": "switch.example_bedroom_main_relay",
+      "confirmed": false
+    },
+    "bedroom_2": {
+      "name": "Camera 2",
+      "floor": "night",
+      "sensor": "sensor.example_bedroom_2_sensor",
+      "relay": "switch.example_bedroom_2_relay",
+      "confirmed": false
+    },
+    "bedroom_3": {
+      "name": "Camera 3",
+      "floor": "night",
+      "sensor": "sensor.example_bedroom_3_sensor",
+      "relay": "switch.example_bedroom_3_relay",
+      "confirmed": false
+    },
+    "bath_night": {
+      "name": "Bagno (+1)",
+      "floor": "night",
+      "sensor": "sensor.example_bath_night_sensor",
+      "relay": "switch.example_bath_night_relay",
+      "confirmed": false,
+      "bath": true
+    },
+    "living": {
+      "name": "Sala",
+      "floor": "day",
+      "sensor": "sensor.example_living_sensor",
+      "relay": "switch.example_living_relay",
+      "confirmed": false
+    },
+    "kitchen": {
+      "name": "Cucina",
+      "floor": "day",
+      "sensor": "sensor.example_kitchen_sensor",
+      "relay": "switch.example_kitchen_relay",
+      "confirmed": false
+    },
+    "bath_day": {
+      "name": "Bagno (0)",
+      "floor": "day",
+      "sensor": null,
+      "relay": "switch.example_kitchen_relay",
+      "confirmed": false,
+      "bath": true,
+      "follows": "kitchen"
+    },
+    "basement_room": {
+      "name": "Taverna",
+      "floor": "basement",
+      "sensor": "sensor.example_basement_room_sensor",
+      "relay": "switch.example_basement_room_relay",
+      "confirmed": false
+    }
+  },
+  "legacy_climates": [
+    "climate.example_legacy_climates_0",
+    "climate.example_legacy_climates_1",
+    "climate.example_legacy_climates_2",
+    "climate.example_legacy_climates_3",
+    "climate.example_legacy_climates_4",
+    "climate.example_legacy_climates_5",
+    "climate.example_legacy_climates_6"
+  ],
+  "competing_automations": [
+    "automation.example_competing_automations_0",
+    "automation.example_competing_automations_1"
+  ],
+  "telemetry": {
+    "online": "binary_sensor.example_online",
+    "heartbeat": "sensor.example_heartbeat",
+    "error": "sensor.example_error",
+    "mode": "select.example_mode",
+    "zones": "select.example_zones",
+    "pump1": "binary_sensor.example_pump1",
+    "pump2": "binary_sensor.example_pump2",
+    "flow": "sensor.example_flow",
+    "dhw_temp": "sensor.example_dhw_temp",
+    "dhw_target": "number.example_dhw_target",
+    "threeway": "sensor.example_threeway",
+    "sterilization": "switch.example_sterilization",
+    "defrost": "switch.example_defrost",
+    "load_shed": "binary_sensor.example_load_shed"
+  },
+  "energy": {
+    "heat_power": "sensor.example_heat_power",
+    "heat_thermal": "sensor.example_heat_thermal",
+    "dhw_power": "sensor.example_dhw_power",
+    "dhw_thermal": "sensor.example_dhw_thermal",
+    "cool_power": null,
+    "cool_thermal": null,
+    "heat_energy": "sensor.example_heat_energy",
+    "dhw_energy": "sensor.example_dhw_energy",
+    "cool_energy": "sensor.example_cool_energy"
+  },
+  "retired_climates": [
+    "climate.example_legacy_climates_0",
+    "climate.example_legacy_climates_1",
+    "climate.example_legacy_climates_2",
+    "climate.example_legacy_climates_3",
+    "climate.example_legacy_climates_4",
+    "climate.example_legacy_climates_5",
+    "climate.example_legacy_climates_6"
+  ],
+  "admin_user_ids": [
+    "REPLACE_WITH_YOUR_HA_ADMIN_USER_ID"
+  ]
+}

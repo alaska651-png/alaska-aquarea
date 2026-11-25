@@ -1,0 +1,12 @@
+{
+  "control_enabled": false,
+  "user_authorized_physical_commands": false,
+  "old_system_excluded": false,
+  "hydraulics_verified": false,
+  "bath_contacts_verified": false,
+  "room_mapping_verified": false,
+  "panasonic_control_verified": false,
+  "fan_coils_verified": false,
+  "physical_tests_passed": false,
+  "safe_closure_with_pump": false
+}

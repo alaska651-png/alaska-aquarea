@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {temperatureReading,weatherHumidity} from '../src/climate-data.mjs';
+const now=Date.now(),heartbeat={last_changed:new Date(now-5000).toISOString()},online={state:'on'};
+const reading=(state='8',unit='°C')=>({state,attributes:{unit_of_measurement:unit},last_updated:new Date(now-86400000).toISOString()});
+assert.equal(temperatureReading(reading(),heartbeat,online,true,-50,60,now),8);
+for(const s of [reading('unknown'),reading('-128'),reading('127'),reading('8','F'),undefined])assert.equal(temperatureReading(s,heartbeat,online,true,-50,60,now),null);
+assert.equal(temperatureReading(reading('34'),heartbeat,online,true,-10,95,now),34);
+assert.equal(temperatureReading(reading(),{last_changed:new Date(now-120000).toISOString()},online,true,-50,60,now),null);
+assert.equal(temperatureReading(reading(),heartbeat,{state:'off'},true,-50,60,now),null);
+assert.equal(temperatureReading(reading(),heartbeat,online,false,-50,60,now),null);
+const weather={state:'clear-night',attributes:{humidity:80},last_updated:new Date(now-3600000).toISOString()};
+assert.equal(weatherHumidity(weather,true,now),80);
+assert.equal(weatherHumidity({...weather,attributes:{humidity:0}},true,now),0);
+for(const x of [undefined,{...weather,state:'unavailable'},{...weather,attributes:{humidity:101}},{...weather,last_updated:new Date(now-10800000).toISOString()}])assert.equal(weatherHumidity(x,true,now),null);
+assert.equal(weatherHumidity(weather,false,now),null);
+console.log('Environment readings: 17 checks passed');

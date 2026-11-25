@@ -1,0 +1,8 @@
+*.env
+!*.env.example
+/data/
+state/
+.private/
+__pycache__/
+*.pyc
+node_modules/
