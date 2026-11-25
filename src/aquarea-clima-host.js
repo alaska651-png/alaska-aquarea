@@ -25,3 +25,6 @@ class AquareaClimaHost extends HTMLElement {
   getCardSize(){return 20;}
 }
 if(!customElements.get('aquarea-clima-host'))customElements.define('aquarea-clima-host',AquareaClimaHost);
+
+window.customCards=window.customCards||[];
+if(!window.customCards.some(card=>card.type==='aquarea-clima-host'))window.customCards.unshift({type:'aquarea-clima-host',name:'Aquarea Clima · Alaska',description:'Sinottico Panasonic, circuiti, controlli PDC, energia e analisi COP. Richiede i servizi Aquarea Clima.'});

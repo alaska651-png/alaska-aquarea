@@ -90,7 +90,8 @@ class Bridge:
     def control_read(self):
         if not self.health()['pdc_frames_advancing']:raise ControlError('Attendi letture recenti dalla PDC.')
         status=read_json(PDC+'/status');data=read_json(PDC+'/json')
-        if status.get('mac','').upper()!='B0:CB:D8:D0:25:FF':raise ControlError('Identità della ETH01 diversa da quella prevista.')
+        expected_mac=os.environ.get('HEISHAMON_EXPECTED_MAC','').strip().upper()
+        if not expected_mac or status.get('mac','').upper()!=expected_mac:raise ControlError('Configura e verifica HEISHAMON_EXPECTED_MAC per la tua ETH01.')
         if status.get('firmware') not in ['2.0-WT32-ETH01-CZ-web1','2.0-WT32-ETH01-CZ-web2-buffer']:raise ControlError('Firmware della ETH01 non riconosciuto.')
         values={x['Name']:number(x.get('Value')) for x in data.get('heatpump',[]) if x.get('Name') in GUARDS}
         with urllib.request.urlopen(PDC+'/debug',timeout=6) as response:raw=response.read().decode()

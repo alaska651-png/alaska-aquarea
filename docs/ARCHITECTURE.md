@@ -1,4 +1,6 @@
-# Architecture and distribution boundary
+# Aquarea Clima architecture and distribution boundary
+
+The primary dashboard source is aquarea-clima/web with aquarea-clima/server.py. The main HA card is custom:aquarea-clima-host; the Coordinator is a linked, separate view.
 
 HeishaMon WT32-ETH01 → MQTT / existing HA integration → coordinator → authenticated HA calls and status events → dashboard.
 
@@ -11,7 +13,8 @@ The optional Aquarea Clima iframe uses an HA-native session gateway. Its compani
 - `dist/`: HACS frontend, coordinator card and optional Aquarea Clima host.
 - `src/`: frontend build inputs with generic room identifiers.
 - `coordinator/`: engine, daemon, mode policy, supervisor, health check and synthetic tests.
-- `companion/`: companion source snapshot, deployment addresses replaced by loopback and private configuration excluded.
+- `aquarea-clima/`: full dashboard web application, schematic, COP views and authenticated web server.
+- `companion/`: linked data/control/recorder services and HA gateway, with private configuration excluded.
 - `examples/`: generic, disabled templates.
 
 ## Excluded

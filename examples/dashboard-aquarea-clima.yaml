@@ -1,0 +1,7 @@
+title: Aquarea Clima
+views:
+  - title: Impianto
+    path: impianto
+    type: panel
+    cards:
+      - type: custom:aquarea-clima-host
