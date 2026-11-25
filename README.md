@@ -2,9 +2,9 @@
 
 **La dashboard completa per Panasonic Aquarea e HeishaMon WT32-ETH01.**
 
-![Sinottico Aquarea Clima](docs/aquarea-clima-sinottico.svg)
+![Sinottico Aquarea Clima](docs/images/sinottico.jpg)
 
-Anteprima del disegno realmente usato dalla dashboard, senza dati di un impianto privato.
+Schermata della dashboard in funzione. [Statistiche, analisi COP e circuito idraulico nella galleria](#schermate-della-dashboard).
 
 Questo è il progetto **Aquarea Clima**: sinottico generale, circuiti della pompa di calore, controlli PDC, energia, storico e analisi COP. Il Coordinatore climatico è un componente collegato, non la dashboard principale.
 
@@ -27,6 +27,30 @@ Firmware associato: **[HeishaMon WT32-ETH01 Ethernet + CZ-TAW1](https://github.c
 | Navigazione | Coordinatore ↔ Aquarea Clima, Home HA e firma Alaska |
 
 Le viste principali sono in [`aquarea-clima/web/`](aquarea-clima/web/). Il server autenticato è [`aquarea-clima/server.py`](aquarea-clima/server.py).
+
+## Schermate della dashboard
+
+Immagini reali acquisite il **25 novembre 2026**, con letture e storico dell'impianto al momento dello scatto. Non sono dati dimostrativi e non si aggiornano nella pagina GitHub. COP ed energie restano stime Panasonic con la copertura indicata nell'interfaccia; `N/D` segnala una misura non disponibile. Le schermate non includono credenziali o nomi personali delle stanze.
+
+### Statistiche e storico
+
+Consumi elettrici e termici, COP energetico stimato e grafici orari, con selezione del periodo ed esportazione.
+
+![Statistiche e storico: bilancio energetico e grafici orari](docs/images/statistiche.jpg)
+
+### Analisi COP, modulazione e avviamenti
+
+COP su più intervalli, copertura dei dati, avviamenti osservati e durata dei cicli. Il conteggio osservato e quello del recorder HA possono differire per finestra e copertura, indicate nella vista.
+
+![Analisi COP e modulazione con avviamenti e durata dei cicli](docs/images/analisi-cop.jpg)
+
+### Circuito idraulico
+
+Primario, ACS integrata, buffer e circuito miscelato Z2, con temperature e stato dei circolatori. Lo schema è funzionale e non sostituisce il disegno esecutivo dell'impianto.
+
+![Circuito idraulico con buffer, ACS e zone Z1 e Z2](docs/images/circuito-idraulico.jpg)
+
+L'[anteprima vettoriale senza letture dell'impianto](docs/aquarea-clima-sinottico.svg) rimane disponibile.
 
 ## Scaricare il lavoro completo
 
